@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -13,12 +13,19 @@
             <connections>
                 <outlet property="cropLineView" destination="s3o-CZ-FSI" id="whU-eD-tVU"/>
                 <outlet property="maskView" destination="2yD-j9-UbT" id="VJn-kc-B9S"/>
+                <outlet property="maskViewBottomConst" destination="hTc-9G-5wZ" id="dng-0H-b9V"/>
+                <outlet property="maskViewLeadingConst" destination="IJJ-Bc-dKk" id="YxP-HT-3GT"/>
+                <outlet property="maskViewTopConst" destination="DIG-jk-035" id="fWY-cE-ib5"/>
+                <outlet property="maskViewTrailingConst" destination="bga-kW-L8a" id="gUf-VW-oOu"/>
                 <outlet property="scrollBottomConst" destination="mtf-mK-ceZ" id="lfq-m8-WDI"/>
                 <outlet property="scrollLeadingConst" destination="fY0-Cr-Tn7" id="ajM-In-EOw"/>
                 <outlet property="scrollTopConst" destination="Juu-4F-tsB" id="XMc-mb-wyv"/>
                 <outlet property="scrollTrailingConst" destination="4et-n4-DL8" id="ocv-6K-s7o"/>
                 <outlet property="scrollView" destination="pt9-xv-pY8" id="uub-bk-PEI"/>
                 <outlet property="toolBar" destination="vHQ-L3-alI" id="MWr-tg-4kV"/>
+                <outlet property="toolBarBottomConst" destination="aC0-1e-7Jf" id="Imp-gr-2Ou"/>
+                <outlet property="toolBarLeadingConst" destination="yuL-xa-0hk" id="nE0-lC-yVx"/>
+                <outlet property="toolBarTrailingConst" destination="tTC-2I-Sje" id="tg9-YB-Ut4"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Kgb-qb-Kfy"/>
             </connections>
         </placeholder>

@@ -38,10 +38,17 @@ public class PKCCropViewController: UIViewController {
     @IBOutlet fileprivate weak var scrollTrailingConst: NSLayoutConstraint!
     @IBOutlet private weak var toolBar: UIToolbar!
 
-    fileprivate var isZoomTimer = Timer()
-
+    @IBOutlet weak var toolBarBottomConst: NSLayoutConstraint!
+    @IBOutlet weak var toolBarLeadingConst: NSLayoutConstraint!
+    @IBOutlet weak var toolBarTrailingConst: NSLayoutConstraint!
+    
+    @IBOutlet weak var maskViewTopConst: NSLayoutConstraint!
+    @IBOutlet weak var maskViewLeadingConst: NSLayoutConstraint!
+    @IBOutlet weak var maskViewTrailingConst: NSLayoutConstraint!
+    @IBOutlet weak var maskViewBottomConst: NSLayoutConstraint!
+    
     fileprivate let imageView = UIImageView()
-
+    fileprivate var isZoomTimer = Timer()
     @IBOutlet fileprivate weak var cropLineView: PKCCropLineView!
     @IBOutlet fileprivate weak var maskView: UIView!
     
@@ -53,7 +60,27 @@ public class PKCCropViewController: UIViewController {
         self.tag = tag
     }
 
-
+    public override func loadView() {
+        super.loadView()
+        if #available(iOS 11.0, *) {
+            if UIApplication.shared.keyWindow != nil {
+                let window: UIWindow = UIApplication.shared.keyWindow!
+                self.scrollBottomConst.constant = window.safeAreaInsets.bottom
+                self.scrollTopConst.constant = window.safeAreaInsets.top
+                self.scrollLeadingConst.constant = window.safeAreaInsets.left
+                self.scrollTrailingConst.constant = window.safeAreaInsets.right
+                
+                self.toolBarBottomConst.constant = window.safeAreaInsets.bottom
+                self.toolBarLeadingConst.constant = window.safeAreaInsets.left
+                self.toolBarTrailingConst.constant = window.safeAreaInsets.right
+                
+                self.maskViewBottomConst.constant = window.safeAreaInsets.bottom
+                self.maskViewTopConst.constant = window.safeAreaInsets.top
+                self.maskViewLeadingConst.constant = window.safeAreaInsets.left
+                self.maskViewTrailingConst.constant = window.safeAreaInsets.right                
+            }
+        }
+    }
 
     override public var prefersStatusBarHidden: Bool{
         if self.navigationController == nil || !PKCCropHelper.shared.isNavigationBarShow{
