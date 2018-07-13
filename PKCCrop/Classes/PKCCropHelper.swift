@@ -36,10 +36,10 @@ public class PKCCropHelper{
     public var tintColor: UIColor = UIColor(red: 0, green: 0.4, blue: 1, alpha: 1)
     
     public var isDegressShow = true
-    public var degressBeforeImage: UIImage? = nil
-    public var degressAfterImage: UIImage? = nil
+    public var degressBeforeImage: UIImage?
+    public var degressAfterImage: UIImage?
     
-    var isCropRate = false
+    public var isCropRate = false
     var isCircle = false
 
     let minSize: CGFloat = 120
